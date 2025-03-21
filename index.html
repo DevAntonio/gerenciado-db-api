@@ -33,7 +33,7 @@
     <script>
         // Função para carregar produtos ao carregar a página
         function loadProducts() {
-            fetch('http://localhost:3000/api/products')
+            fetch('http://localhost:3002/api/products')
                 .then(response => response.json())
                 .then(products => {
                     const productList = document.getElementById('product-list');
@@ -62,7 +62,7 @@
             const price = document.getElementById('product-price').value;
             
             if (name && description && price) {
-                fetch('http://localhost:3000/api/products', {
+                fetch('http://localhost:3002/api/products', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
